@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Primeiro App Desktop</title>
+    <style type="text/css">
+        body{
+            background-color: gray;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #cm{
+            font-size: 2rem;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Primeiro App Desktop</h1>
+
+        <h3>Conversor de Polegadas para Centímetro</h3>
+
+        <input type="text" name="pol" id="pol">
+        <div id="cm"></div>
+        <button onclick="converter()">Converter</button>
+    </div>
+
+    <script type="text/javascript">
+        function converter(){
+            let pol = document.getElementById("pol").value
+            let cm = document.getElementById("cm")
+
+            cm.innerHTML = pol * 2.54 + " cm";
+        }
+    </script>
+</body>
+</html>
